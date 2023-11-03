@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
-if [ -z $1 ] ;then
-    echo "usage: $0 <github repo url> [preferred dir name]"
+if [[ -z $1 || -z $2 ]] ;then
+    echo "run this from the git root"
+    echo "usage: $0 <github repo url> <folder name>"
     exit
 fi
 rootname=$(basename "$1")
